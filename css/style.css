@@ -3,10 +3,120 @@
 
     Font     :      Roboto
 
-    Colors   :      La Palma                 #4A9532
-                    Gossip                   #A1D890
-                    Apple                    #70B45A
+    Colors   :      La Palma                 #4A9532    (Underlines)
+                    Gossip                   #A1D890    (Unfocused)
+                    Apple                    #70B45A    (Boutons, Hover, Focus, Links)
                     Forest Green             #286C12
                     British Racing Green     #114800
-                    White                    #fff
+                    White                    #fff       (Text with black backgrounds)
+                    Black                    #000
+                    Steel Gray               #41464b    (Headings)
+                    Blue Bayoux              #64707b    (Paragraphs)
+                    
 ==================================================================*/
+
+/*=================================================================
+                        GENERAL CSS
+==================================================================*/
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+p {
+    color: #64707b;
+    font-size: 16px;
+    font-weight: 300;
+    text-align: justify;
+}
+
+h2, h3 {
+    text-transform: uppercase;
+    color: #41464b;
+}
+
+/*=================================================================
+                        GENERIC BUTTONS
+==================================================================*/
+
+.btn-general {
+    border-color: #4A9532;
+    border-width: 2px;
+    border-radius: 0;
+    color: #fff;
+    padding: 12px 26px 12px 26px;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.btn-general:hover, .btn-general:focus {
+    background-color: #70B45A;
+    color: #fff;
+}
+
+.btn-blue {
+    border-color: #34c6d3;
+    color: #34c6d3;
+}
+
+.btn-blue:hover,
+.btn-blue:focus {
+    background-color: #34c6d3;
+    color: #fff;
+}
+
+/*=================================================================
+                        BACKGROUND PARALLAX EFFECT
+==================================================================*/
+
+.bg-parallax {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/*=================================================================
+                        HOME SECTION
+==================================================================*/
+
+#home {
+    height: 100%;
+}
+
+#home-cover {
+    height: 100%;
+    background-image: url("../img/bg-home.jpg");
+}
+
+#home-content-box {
+    width: 100%;
+    height: 100%;
+    display: table;
+}
+
+#home-content-box-inner {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#home-heading h3 {
+    color: #fff;
+    font-size: 45px;
+    font-weight: 700;
+    /* margin top - right - bottom - left */
+    margin: 20px 0px 20px 0;
+}
+
+#home-heading h2 {
+    color: #fff;
+    font-size: 55px;
+    font-weight: 700;
+    /* margin top - right - bottom - left */
+    margin: 0px 0px 20px 0;
+}
