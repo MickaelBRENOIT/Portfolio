@@ -120,3 +120,29 @@ h2, h3 {
     /* margin top - right - bottom - left */
     margin: 0px 0px 20px 0;
 }
+
+/*=================================================================
+                        HOME SECTION - Animations
+==================================================================*/
+
+#home-cover,
+#home-heading,
+#home-btn {
+    -webkit-animation-duration: .5s;
+            animation-duration: .5s;
+}
+
+#home-cover {
+    -webkit-animation-delay: .1s;
+            animation-delay: .1s;
+}
+
+#home-heading {
+    -webkit-animation-delay: .5s;
+            animation-delay: .5s;
+}
+
+#home-btn {
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s;
+}
