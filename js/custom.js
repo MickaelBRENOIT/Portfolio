@@ -19,3 +19,17 @@ $(function () {
         autoplayHoverPause: true
     });
 });
+
+/*=================================================================
+                        SKILLS
+==================================================================*/
+
+$(function () {
+    $("#skills").magnificPopup({
+        delegate: 'a',
+        type: 'image',
+        gallery: {
+            enabled: true
+        }
+    });
+});

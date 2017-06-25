@@ -281,3 +281,30 @@ h2, h3 {
     color: #fff;
     margin-top: 20px;
 }
+
+/*=================================================================
+                        SKILLS
+==================================================================*/
+
+.row.no-gutters [class*=col-] {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.img-wrapper {
+    overflow: hidden;
+}
+
+.img-wrapper img {
+    -webkit-transition: -webkit-transform .5s ease;
+    transition: -webkit-transform .5s ease;
+    transition: transform .5s ease;
+    transition: transform .5s ease, -webkit-transform .5s ease;
+}
+
+.img-wrapper img:hover {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+    cursor: -webkit-zoom-in;
+    cursor: zoom-in;
+}
