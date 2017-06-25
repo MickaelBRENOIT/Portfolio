@@ -59,14 +59,14 @@ h2, h3 {
     color: #fff;
 }
 
-.btn-blue {
-    border-color: #34c6d3;
-    color: #34c6d3;
+.btn-green {
+    border-color: #4A9532;
+    color: #64707b;
 }
 
-.btn-blue:hover,
-.btn-blue:focus {
-    background-color: #34c6d3;
+.btn-green:hover,
+.btn-green:focus {
+    background-color: #4A9532;
     color: #fff;
 }
 
@@ -145,4 +145,109 @@ h2, h3 {
 #home-btn {
     -webkit-animation-delay: 1s;
             animation-delay: 1s;
+}
+
+/*=================================================================
+                        GENERIC CONTENT
+==================================================================*/
+
+.content-box {
+    padding: 60px 0 60px 0;
+}
+
+.content-title h3 {
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 0 30px 0;
+}
+
+.content-title-white h3 {
+    color: #fff;
+}
+
+.content-title-underline {
+    width: 30px;
+    height: 3px;
+    background-color: #4A9532;
+    margin: 0 auto 30px auto;
+}
+
+/*=================================================================
+                        ABOUT SECTION
+==================================================================*/
+
+
+#about-bg-diagonal {
+    width: 60%;
+    height: 700px;
+    float: right;
+    background-image: url("../img/bg-about.jpg");
+    border-left: 200px solid #fff;
+    border-top: 700px solid transparent;
+}
+
+#about-content-box {
+    float: left;
+    height: 700px;
+}
+
+#about-content-box-outer {
+    width: 100%;
+    height: 100%;
+    display: table;
+}
+
+#about-content-box-inner {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#about .content-desc h3 {
+    font-size: 30px;
+    font-weight: 700;
+    text-align: left;
+    margin: 0 0 30px 0;
+}
+
+#about .content-desc-underline {
+    width: 150px;
+    height: 3px;
+    background-color: #4A9532;
+    margin: 0 0 30px 0;
+}
+
+#about-description p {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+/*=================================================================
+                        SOCIAL LIST
+==================================================================*/
+
+.social-list {
+    padding-left: 0;
+    text-align: center;
+}
+
+.social-list li {
+    list-style: none;
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    margin-right: 6px;
+    margin-top: 10px;
+}
+
+.social-icon i {
+    font-size: 25px;
+}
+
+.icon-gray i {
+    color: #64707b;
+}
+
+.social-icon i:hover {
+    color: #70B45A;
 }
