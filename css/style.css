@@ -250,3 +250,34 @@ h2, h3 {
 .social-icon i:hover {
     color: #70B45A;
 }
+
+/*=================================================================
+                        SCHOOL CAREER
+==================================================================*/
+
+#school-career-cover {
+    background-image: url("../img/bg-school-career.jpg");
+}
+
+#schools {
+    padding: 50px 0;
+}
+
+.school img {
+    max-width: 120px;
+    margin: 0 auto 0 auto;
+}
+
+.school blockquote {
+    border: 0;
+    font-family: Georgia, sans-serif;
+    color: #fff;
+    /*top - bottom && left - right*/
+    padding: 6px 150px;
+    position: relative;
+}
+
+.school blockquote p {
+    color: #fff;
+    margin-top: 20px;
+}

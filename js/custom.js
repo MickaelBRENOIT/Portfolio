@@ -5,3 +5,17 @@
 $(function(){
    new WOW().init(); 
 });
+
+/*=================================================================
+                        SCHOOL CAREER
+==================================================================*/
+
+$(function () {
+    $("#schools").owlCarousel({
+        items: 1,
+        autoplay: true,
+        smartSpeed: 700,
+        loop: true,
+        autoplayHoverPause: true
+    });
+});
