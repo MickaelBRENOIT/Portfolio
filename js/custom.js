@@ -44,3 +44,39 @@ $(function(){
        no_overlay: true
    }); 
 });
+
+/*=================================================================
+                        HEADER
+==================================================================*/
+
+/* HANDLING SCROLL EVENT NAVIGATION */
+
+$(function () {
+    $(window).scroll(function () {
+        if ($(this).scrollTop() < 50) {
+            $("nav").removeClass("portfolio-top-nav");
+            $("#back-to-top").fadeOut();
+        } else {
+            $("nav").addClass("portfolio-top-nav");
+            $("#back-to-top").fadeIn();
+        }
+    });
+});
+
+/* SMOOTH SCROLLING */
+$(function () {
+    $("a.smooth-scroll").click(function (event) {
+        event.preventDefault();
+        var section = $(this).attr("href");
+        $('html, body').animate({
+            scrollTop: $(section).offset().top - 64
+        }, 1250, "easeInOutExpo");
+    });
+});
+
+/* CLOSE MOBILE MENU ON CLICK */
+$(function(){
+    $(".navbar-collapse ul li a").on("click touch", function(){
+        $(".navbar-toggle").click(); 
+    });
+});

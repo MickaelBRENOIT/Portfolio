@@ -49,7 +49,40 @@
 
 </head>
 
-<body>
+<body data-spy="scroll" data-target=".navbar-fixed-top" data-offset="65">
+    
+    <!-- Header -->
+    <header>
+        <nav class="navbar navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="portfolio-nav-wrapper">
+                    <div class="navbar-header">
+
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#portfolio-menu">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+
+                        <a class="navbar-brand smooth-scroll" href="#home">
+                            <img src="img/logo.png" alt="logo">
+                        </a>
+                    </div>
+
+                    <div class="collapse navbar-collapse" id="portfolio-menu">
+                        <ul class="nav navbar-nav">
+                            <li><a class="smooth-scroll" href="#home">Home</a></li>
+                            <li><a class="smooth-scroll" href="#about">About</a></li>
+                            <li><a class="smooth-scroll" href="#school-career">School Career</a></li>
+                            <li><a class="smooth-scroll" href="#skills">Skills</a></li>
+                            <li><a class="smooth-scroll" href="#projects">My Projects</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
 
     <!-- Home -->
     <section id="home">
@@ -333,6 +366,7 @@
         </div>
     </section>
 
+    <!-- Footer -->
     <footer>
         <div id="footer-bottom">
             <div class="container">
@@ -346,10 +380,10 @@
                         <div id="footer-menu">
                             <ul>
                                 <li><a class="smooth-scroll" href="#home">Home</a>/</li>
-                                <li><a class="smooth-scroll" href="#services">About</a>/</li>
-                                <li><a class="smooth-scroll" href="#work">School Career</a>/</li>
-                                <li><a class="smooth-scroll" href="#team">Skills</a>/</li>
-                                <li><a class="smooth-scroll" href="#testimonials">My Projects</a></li>
+                                <li><a class="smooth-scroll" href="#about">About</a>/</li>
+                                <li><a class="smooth-scroll" href="#school-career">School Career</a>/</li>
+                                <li><a class="smooth-scroll" href="#skills">Skills</a>/</li>
+                                <li><a class="smooth-scroll" href="#projects">My Projects</a></li>
                             </ul>
                         </div>
                     </div>
@@ -382,6 +416,9 @@
     <!-- Twenty Twenty JS -->
     <script src="js/twenty-twenty/jquery.event.move.js"></script>
     <script src="js/twenty-twenty/jquery.twentytwenty.js"></script>
+    
+    <!-- JQuery Easing -->
+    <script src="js/jquery-easing/jquery.easing.1.3.js"></script>
 
     <!-- Custom File JS -->
     <script src="js/custom.js"></script>
