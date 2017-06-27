@@ -1,0 +1,180 @@
+/*************************************************************************************************
+
+                            BOOTSTRAP 3 MEDIA QUERIES
+
+**************************************************************************************************/
+
+
+/* Large Devices (Desktop & Laptops) */
+
+@media (min-width: 1200px) {
+    /* OK */
+}
+
+
+/* Medium Devices (Landscape Tablets & Medium Desktops) */
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    /* Mobile Menu */
+    .navbar {
+        background: rgba(0, 0, 0, 0.7);
+        padding: 0;
+    }
+    
+    .navbar-nav {
+        float: left;
+    }
+    
+    .portfolio-nav-wrapper {
+        padding: 0;
+    }
+}
+
+
+/* Small Devices (Portrait Tablets & Small Desktops) */
+
+@media (min-width: 768px) and (max-width: 991px) {
+    /* Mobile Menu */
+    .navbar {
+        background: rgba(0, 0, 0, 0.7);
+        padding: 0;
+    }
+    
+    .navbar-nav {
+        float: left;
+    }
+    
+    .portfolio-nav-wrapper {
+        padding: 0;
+    }
+    
+    /* About - Remove diagonal borders */
+    #about-bg-diagonal {
+        border-left: 0;
+        border-top: 0;
+        width: 100%;
+        height: 350px;
+    }
+    
+    #about-content-box {
+        width: 100%;
+        height: 350px;
+    }
+    
+    /* Create spaces after the diagonal bg and before the heading of the next part */
+    #about-content-box-outer {
+    margin-top: 50px;
+    }
+    
+    #school-career .content-box {
+        margin-top: 100px;
+    }
+    
+    /* Copyrights */
+    #footer-copyrights-p {
+        text-align: center;
+    }
+}
+
+
+/* Extra Small Devices (Landscape Phones & Portrait Tablets) */
+
+@media (max-width: 767px) {
+    /* Mobile Menu */
+    .navbar {
+        background: rgba(0, 0, 0, 0.7);
+        padding: 0;
+    }
+    
+    .navbar-nav {
+        float: left;
+    }
+    .portfolio-nav-wrapper {
+        padding: 0;
+    }
+    
+    /* Home */
+    #home-heading h3 {
+        font-size: 24px;
+    }
+    
+    /* Buttons */
+    .btn-general {
+        padding: 6px 22px 6px 22px;
+        font-size: 14px;
+    }
+    
+    /* About - Remove diagonal borders */
+    #about-bg-diagonal {
+        border-left: 0;
+        border-top: 0;
+        width: 100%;
+        height: 350px;
+    }
+    
+    #about-content-box {
+        width: 100%;
+        height: 350px;
+    }
+    
+    /* Create spaces after the diagonal bg and before the heading of the next part */
+    #about-content-box-outer {
+    margin-top: 50px;
+    }
+    
+    #school-career .content-box {
+        margin-top: 200px;
+    }
+    
+    /* Skills */
+    .img-wrapper img {
+        min-width: 100%;
+    }
+    
+    /* School-career */
+    .school blockquote {
+        padding: 0 0 0 0;
+    }
+    
+    .school blockquote p {
+        font-size: 14px;
+    }
+    
+    /* Copyrights */
+    #footer-copyrights-p {
+        text-align: center;
+    }
+}
+
+
+/* Extra Small Devices (Smaller Devices) */
+
+@media (max-width: 480px) {
+    #school-career .content-box {
+        margin-top: 350px;
+    }
+    
+    #projects .project-name a {
+        font-size: 12px;
+    }
+}
+
+
+/* Extra Small Devices (Smaller devices) */
+
+@media (max-width: 320px) {
+    
+    /* About */
+    #about-content-box {
+        margin-top: 40px;
+    }
+    
+    /* School-career */
+    .school-career img {
+        max-width: 80px;
+    }
+    
+    .school-career blockquote {
+        padding: 6px 30px;
+    }
+}

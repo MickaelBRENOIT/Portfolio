@@ -85,8 +85,8 @@ h4 {
 
 .btn-back-to-top {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 100px;
+    right: 40px;
     font-size: 20px;
     padding: 3px 15px;
     border-radius: 0;
@@ -307,13 +307,24 @@ h4 {
     margin-bottom: 20px;
 }
 
+#about .social-list-btn {
+    width: 100%;
+}
+
+#about .social-list-btn .social-list {
+    float: right;
+}
+
+#about .social-list-btn a {
+    float: left;
+}
+
 /*=================================================================
                         SOCIAL LIST
 ==================================================================*/
 
 .social-list {
     padding-left: 0;
-    text-align: right;
 }
 
 .social-list li {
