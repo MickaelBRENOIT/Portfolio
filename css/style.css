@@ -466,3 +466,16 @@ h4 {
 #footer-menu a:hover {
     color: #70B45A;
 }
+
+/*=================================================================
+                        Enigma
+==================================================================*/
+
+#enigma-body {
+    background-color: #A1D890;
+}
+
+.content-box-enigma {
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
