@@ -1,48 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-    
-        <!-- allow to use accents -->
-        <meta charset="utf-8">
-        
-        <!-- Basic SEO Optimization -->
-        <meta name="description" content="">
-        <meta name="keywords" content="">
-        
-        <!-- allow compatibility with IE -->
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        
-        <!-- allow compatibility with small devices like tablets and phones -->
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        
-        <!-- title of the website -->
-        <title>Enigma</title>
-        
-        <!-- icon of the website -->
-        <link rel="shortcut icon" href="">
-        
-        <!-- Fonts : need to be load before any others css files (Default Font "Roboto") -->
-        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i" rel="stylesheet">
-        
-        <!-- CSS Files -->
-        <link rel="stylesheet" href="../css/bootstrap/bootstrap.css">
-        <link rel="stylesheet" href="../css/style.css">
-        
-        
-    </head>
+<head>
 
-    <body id="enigma-body">
-    
-    <section id="enigma-section-title">
+    <!-- allow to use accents -->
+    <meta charset="utf-8">
+
+    <!-- Basic SEO Optimization -->
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <!-- allow compatibility with IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- allow compatibility with small devices like tablets and phones -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- title of the website -->
+    <title>Enigma</title>
+
+    <!-- icon of the website -->
+    <link rel="shortcut icon" href="">
+
+    <!-- Fonts : need to be load before any others css files (Default Font "Roboto") -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i" rel="stylesheet">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="../css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+
+</head>
+
+<body id="enigma-body">
+
+    <section id="enigma-section">
+
+        <!-- Title of this page -->
         <div class="content-box-enigma">
             <div class="content-title">
-                <h3>Enigma</h3>
+                <h2>Enigma Project</h2>
                 <div class="content-title-underline"></div>
             </div>
         </div>
+
+
+
+
+
+        <!-- Little description of how ENIGMA works/worked -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="enigma-description">
+                        <pre class="pre-enigma">"The Enigma machines were a series of electro-mechanical rotor cipher machines developed and used in the early- to mid-20th century to protect commercial, diplomatic and military communication. Enigma was invented by the German engineer Arthur Scherbius at the end of World War I. Early models were used commercially from the early 1920s, and adopted by military and government services of several countries, most notably Nazi Germany before and during World War II. Several different Enigma models were produced, but the German military models, having a plugboard, were the most complex. Japanese and Italian models were also in use." - Wikipedia<br/><br/>This page will show you a fully working example how Enigma works.</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!-- Plugboard Section -->
+        <div class="content-box-enigma">
+            <div class="content-title">
+                <h4>Plugboard</h4>
+                <div class="content-title-underline"></div>
+            </div>
+        </div>
+
+        <!-- Plugboard description -->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="enigma-plugboard-text">
+                        <p class="enigma-text">In 1930, the plugboard or Steckerbrett was introduced on the first Wehrmacht Enigma version. The plugboard is situated on the front of the machine. Without an inserted plug, the current flows from the switches, controlled by the keyboard, directly to the entry rotor. Inserting a cable results in swapping the two involved letters before proceeding to the entry rotor. Each machine was by default equipped with a set of 10 cables. The plugbord was an important improvement of the machines encryption strength.
+                            <br> Each letter has two jacks. Inserting a plug disconnects the upper jack, connected to the keyboard, and the lower jack, connected to the entry wheel. The other end of the cross-wired cable is inserted into another letter's jack, swapping the connections of the two letters. The current passes through the plugboard once on its way to the rotors and another time on its way to the light bulbs.<br/><br/>Source : <a href="http://users.telenet.be/d.rijmenants/en/enigmatech.htm#plugboard">http://users.telenet.be/d.rijmenants/en/enigmatech.htm#plugboard</a></p>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div id="enigma-plugboard-img" class="bg-parallax">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Plugboard settings -->
+        <div class="container">
+            <div class="row plugboard-dispose">
+                <div class="col-md-4">
+                    <label for="labelPlugboard"><p class="enigma-text"><strong>Plugboard settings : </strong></p></label>
+                </div>
+                <div class="col-md-8">
+                    <input type="text" class="form-control" id="fieldPlugboard" placeholder="Example : AN JH MP VS ...">
+                </div>
+            </div>
+        </div>
+
+
     </section>
-    
-    </body>
+
+    <!-- Temporary spaces -->
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+</body>
 
 </html>

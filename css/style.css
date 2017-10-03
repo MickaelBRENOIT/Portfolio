@@ -240,6 +240,13 @@ h4 {
     margin: 0 0 30px 0;
 }
 
+.content-title h2 {
+    font-size: 48px;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 0 30px 0;
+}
+
 .content-title-white h3 {
     color: #fff;
 }
@@ -468,7 +475,7 @@ h4 {
 }
 
 /*=================================================================
-                        Enigma
+                        Enigma Page
 ==================================================================*/
 
 #enigma-body {
@@ -476,6 +483,24 @@ h4 {
 }
 
 .content-box-enigma {
-    padding-bottom: 20px;
-    padding-top: 20px;
+    padding: 20px 0 0 0;
+}
+
+.pre-enigma {
+    white-space:pre-wrap;
+    word-break: keep-all;
+    text-align: justify;
+}
+
+.enigma-text {
+    font-size: 20px;
+}
+
+#enigma-plugboard-img {
+    background-image: url("../img/enigma/plugboard.jpg");
+    border-top: 400px solid transparent;
+}
+
+.plugboard-dispose {
+    padding-top: 50px;
 }
