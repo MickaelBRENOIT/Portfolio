@@ -19,7 +19,8 @@
                         GENERAL CSS
 ==================================================================*/
 
-html, body {
+html,
+body {
     height: 100%;
 }
 
@@ -34,7 +35,8 @@ p {
     text-align: justify;
 }
 
-h2, h3 {
+h2,
+h3 {
     text-transform: uppercase;
     color: #41464b;
 }
@@ -62,7 +64,8 @@ h4 {
     text-transform: uppercase;
 }
 
-.btn-general:hover, .btn-general:focus {
+.btn-general:hover,
+.btn-general:focus {
     background-color: #70B45A;
     color: #fff;
 }
@@ -127,7 +130,7 @@ h4 {
     float: right;
 }
 
-.navbar-nav>li>a {
+.navbar-nav > li > a {
     color: #fff;
     font-size: 15px;
     text-transform: uppercase;
@@ -135,8 +138,8 @@ h4 {
     font-weight: 700;
 }
 
-.navbar-nav>li>a:hover,
-.navbar-nav>li>a:focus {
+.navbar-nav > li > a:hover,
+.navbar-nav > li > a:focus {
     background: none;
     color: #70B45A;
 }
@@ -155,7 +158,7 @@ h4 {
     max-height: none !important;
 }
 
-.navbar-fixed-top ul.navbar-nav>li.active>a {
+.navbar-fixed-top ul.navbar-nav > li.active > a {
     color: #70B45A;
 }
 
@@ -207,22 +210,22 @@ h4 {
 #home-heading,
 #home-btn {
     -webkit-animation-duration: .5s;
-            animation-duration: .5s;
+    animation-duration: .5s;
 }
 
 #home-cover {
     -webkit-animation-delay: .1s;
-            animation-delay: .1s;
+    animation-delay: .1s;
 }
 
 #home-heading {
     -webkit-animation-delay: .5s;
-            animation-delay: .5s;
+    animation-delay: .5s;
 }
 
 #home-btn {
     -webkit-animation-delay: 1s;
-            animation-delay: 1s;
+    animation-delay: 1s;
 }
 
 /*=================================================================
@@ -268,7 +271,6 @@ h4 {
 /*=================================================================
                         ABOUT SECTION
 ==================================================================*/
-
 
 #about-bg-diagonal {
     width: 60%;
@@ -408,7 +410,7 @@ h4 {
 
 .img-wrapper img:hover {
     -webkit-transform: scale(1.5);
-            transform: scale(1.5);
+    transform: scale(1.5);
     cursor: -webkit-zoom-in;
     cursor: zoom-in;
 }
@@ -475,7 +477,15 @@ h4 {
 }
 
 /*=================================================================
+
+
+
+
                         Enigma Page
+
+
+
+
 ==================================================================*/
 
 #enigma-body {
@@ -484,10 +494,11 @@ h4 {
 
 .content-box-enigma {
     padding: 20px 0 0 0;
+    margin-top: 100px;
 }
 
 .pre-enigma {
-    white-space:pre-wrap;
+    white-space: pre-wrap;
     word-break: keep-all;
     text-align: justify;
 }
@@ -496,11 +507,24 @@ h4 {
     font-size: 20px;
 }
 
+.dispose {
+    padding-top: 100px;
+}
+
+/*=================================================================
+                        Plugboard
+==================================================================*/
+
 #enigma-plugboard-img {
     background-image: url("../img/enigma/plugboard.jpg");
     border-top: 400px solid transparent;
 }
 
-.plugboard-dispose {
-    padding-top: 50px;
+/*=================================================================
+                        Rotors
+==================================================================*/
+
+#enigma-rotors-img {
+    background-image: url("../img/enigma/rotors3.jpg");
+    border-top: 720px solid transparent;
 }

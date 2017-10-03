@@ -34,7 +34,7 @@
 
 <body id="enigma-body">
 
-    <section id="enigma-section">
+    <section id="enigma-intro-section">
 
         <!-- Title of this page -->
         <div class="content-box-enigma">
@@ -59,7 +59,8 @@
             </div>
         </div>
 
-
+    </section>
+    <section id="enigma-plugboard-section">
 
 
         <!-- Plugboard Section -->
@@ -88,7 +89,7 @@
 
         <!-- Plugboard settings -->
         <div class="container">
-            <div class="row plugboard-dispose">
+            <div class="row dispose">
                 <div class="col-md-4">
                     <label for="labelPlugboard"><p class="enigma-text"><strong>Plugboard settings : </strong></p></label>
                 </div>
@@ -100,9 +101,132 @@
 
 
     </section>
+    <section id="enigma-rotors-section">
+
+
+
+        <!-- Rotors Section -->
+        <div class="content-box-enigma">
+            <div class="content-title">
+                <h4>Rotors</h4>
+                <div class="content-title-underline"></div>
+            </div>
+        </div>
+
+        <!-- Rotors description -->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-8">
+                    <div id="enigma-rotors-img" class="bg-parallax">
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="enigma-rotors-text">
+                        <p class="enigma-text">The rotors (Walzen in German) are the most important elements of the machine. These round disks, approximately 4 inch in diameter, are made from metal or bakelite and have a core with 26 spring-loaded contacts on the right side, scramble wired to 26 flat contacts on the left side, with a hollow axle in the center. On the outside of the wiring core there's a movable ring with 26 numbers or letters and a notch. This ring is rotatable and is locked with a sprinloaded pin (Wehrmacht) or two springloaded arcs (Kriegmarine) into any of the 26 positions. Changing the position of the ring will change the position of the notch and alphabet, relative to the internal wiring. This setting is called the ring setting or Ringstellung and its position is visible by a dot marking. Each rotor has on its left a notch and on its right a ratchet. These are used by the stepping mechanism to advance the rotors. The internal wiring is different for each rotor. This wiring represents a substitution encryption. The combination of several rotors, in ever-changing positions relative to each other, is what makes the encryption so complex. <br/>The machine was introduced with three rotors. In 1939 the set was extended to five rotors, marked with Roman numerals I, II, III, IV and V, all with a single notch. The Kriegmarine extended this set of rotors with another three rotors called VI, VII and VIII, each with two notches. In 1942, the Kriegsmarine M4 introduced a fourth rotor. To achieve this, the wide B and C reflectors from the three rotor version were replaced by thin B and C reflectors, leaving room for the special fourth rotor. The fourth rotors were of two configurations, named Beta and Gamma, with spring-loaded contacts on both sides, making them incompatible with the other eight rotors.<br/><br/>Source : <a href="http://users.telenet.be/d.rijmenants/en/enigmatech.htm#rotors">http://users.telenet.be/d.rijmenants/en/enigmatech.htm#rotors</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Rotors settings -->
+        <div class="container">
+            <div class="row dispose">
+
+                <!-- Rotors and their order -->
+                <div class="col-md-3">
+                    <label for="labelRotors"><p class="enigma-text"><strong>Rotors and their order : </strong></p></label>
+                </div>
+                <div class="col-md-2" style="text-align: right;">
+                    <label for="labelRotors"><p class="enigma-text"><strong>Position 1 (left) : </strong></p></label>
+                </div>
+                <div class="col-md-1">
+                    <select class="form-control">
+                        <option value="1" selected>I</option>
+                        <option value="2">II</option>
+                        <option value="3">III</option>
+                        <option value="4">IV</option>
+                        <option value="5">V</option>
+                        <option value="6">VI</option>
+                        <option value="7">VII</option>
+                        <option value="8">VIII</option>
+                    </select>
+                </div>
+                <div class="col-md-2" style="text-align: right;">
+                    <label for="labelRotors"><p class="enigma-text"><strong>Position 2 (middle) : </strong></p></label>
+                </div>
+                <div class="col-md-1">
+                    <select class="form-control">
+                        <option value="1">I</option>
+                        <option value="2">II</option>
+                        <option value="3">III</option>
+                        <option value="4" selected>IV</option>
+                        <option value="5">V</option>
+                        <option value="6">VI</option>
+                        <option value="7">VII</option>
+                        <option value="8">VIII</option>
+                    </select>
+                </div>
+                <div class="col-md-2" style="text-align: right;">
+                    <label for="labelRotors"><p class="enigma-text"><strong>Position 3 (right) : </strong></p></label>
+                </div>
+                <div class="col-md-1">
+                    <select class="form-control">
+                        <option value="1">I</option>
+                        <option value="2">II</option>
+                        <option value="3">III</option>
+                        <option value="4">IV</option>
+                        <option value="5">V</option>
+                        <option value="6">VI</option>
+                        <option value="7" selected>VII</option>
+                        <option value="8">VIII</option>
+                    </select>
+                </div>
+
+                <!-- Rotors and their start positions -->
+                <div class="col-md-3">
+                    <label for="labelRotors"><p class="enigma-text"><strong>Rotors and their start positions : </strong></p></label>
+                </div>
+                <div class="col-md-2" style="text-align: right;">
+                    <label for="labelRotors"><p class="enigma-text"><strong>Rotor 01 : </strong></p></label>
+                </div>
+                <div class="col-md-1">
+                    <select class="form-control select-letter">
+                    </select>
+                </div>
+                <div class="col-md-2" style="text-align: right;">
+                    <label for="labelRotors"><p class="enigma-text"><strong>Rotor 02 : </strong></p></label>
+                </div>
+                <div class="col-md-1">
+                    <select class="form-control select-letter">
+                    </select>
+                </div>
+                <div class="col-md-2" style="text-align: right;">
+                    <label for="labelRotors"><p class="enigma-text"><strong>Rotor 03 : </strong></p></label>
+                </div>
+                <div class="col-md-1">
+                    <select class="form-control select-letter">
+                    </select>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
 
     <!-- Temporary spaces -->
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+    <!-- Section where all JS files will be called -->
+
+    <!-- JQuery JS -->
+    <script src="../js/jquery.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="../js/bootstrap/bootstrap.js"></script>
+
+    <!-- Custom File JS -->
+    <script src="../js/customEnigma.js"></script>
 
 </body>
 
