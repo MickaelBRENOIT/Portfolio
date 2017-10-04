@@ -528,3 +528,12 @@ h4 {
     background-image: url("../img/enigma/rotors3.jpg");
     border-top: 720px solid transparent;
 }
+
+/*=================================================================
+                        Rings
+==================================================================*/
+
+#enigma-rings-img {
+    background-image: url("../img/enigma/ring.jpg");
+    border-top: 450px solid transparent;
+}
