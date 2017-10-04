@@ -67,7 +67,9 @@ $(function () {
         var ciphertext = "";
         rotor_start = increment_settings(rotor_start, rotor_order);
         ciphertext = ciphertext + enigma(letter, rotor_start, rotor_order, rotor_ring, plugboard);
-        console.log("Letter : " + ciphertext);
+        // reset color buttons to default behavior (#f9f9f9)
+        reset_color_buttons();
+        $("button").filter(document.getElementById(ciphertext)).css("background-color", "yellow");
         $('#result').append(ciphertext);
 
     });
@@ -132,4 +134,12 @@ function enigma(ch, key, rotors, ring, plugboard) {
     // apply plugboard transformation again
     ch = simplesub(ch, plugboard);
     return ch;
+}
+
+function reset_color_buttons() {
+    var buttons = document.getElementsByClassName("btn-circle-enigma");
+    for (var i = 0; i < buttons.length; i++) {
+        var current_button = buttons[i];
+        current_button.style.backgroundColor = '#F9F9F9';
+    }
 }
