@@ -25,6 +25,8 @@ $(function () {
                         ENIGMA - Implementation
 ==================================================================*/
 
+var rotor_start = [];
+
 $(function () {
     $(".btn-circle-enigma").click(function (event) {
         // get Text Button (title)
@@ -40,10 +42,11 @@ $(function () {
         rotor_order[2] = $("#select-rotor-order-3").val().valueOf() - 1;
 
         // get Start Position Order Rotors
-        var rotor_start = [];
-        rotor_start[0] = code($("#select-rotor-start-1").val());
-        rotor_start[1] = code($("#select-rotor-start-2").val());
-        rotor_start[2] = code($("#select-rotor-start-3").val());
+        if (!isProcessing()) {
+            rotor_start[0] = code($("#select-rotor-start-1").val());
+            rotor_start[1] = code($("#select-rotor-start-2").val());
+            rotor_start[2] = code($("#select-rotor-start-3").val());
+        }
 
         // get Rings Rotors
         var rotor_ring = [];
@@ -65,6 +68,13 @@ $(function () {
 
         // do the actual enigma enciphering
         var ciphertext = "";
+
+        /*if (typeof rotor_start === 'undefined') {
+            console.log("Rotor[] is NOT defined");
+        } else {
+            console.log("Rotor[] is defined");
+        }*/
+
         rotor_start = increment_settings(rotor_start, rotor_order);
         ciphertext = ciphertext + enigma(letter, rotor_start, rotor_order, rotor_ring, plugboard);
         // reset color buttons to default behavior (#f9f9f9)
@@ -142,4 +152,15 @@ function reset_color_buttons() {
         var current_button = buttons[i];
         current_button.style.backgroundColor = '#F9F9F9';
     }
+}
+
+function isProcessing() {
+    var buttons = document.getElementsByClassName("btn-circle-enigma");
+    for (var i = 0; i < buttons.length; i++) {
+        var current_button = buttons[i].textContent;
+        if (document.getElementById(current_button).style.backgroundColor == "yellow") {
+            return true;
+        }
+    }
+    return false;
 }
