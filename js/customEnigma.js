@@ -150,7 +150,7 @@ function reset_color_buttons() {
     var buttons = document.getElementsByClassName("btn-circle-enigma");
     for (var i = 0; i < buttons.length; i++) {
         var current_button = buttons[i];
-        current_button.style.backgroundColor = '#F9F9F9';
+        current_button.style.backgroundColor = '#FFFFFF';
     }
 }
 
