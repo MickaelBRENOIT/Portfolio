@@ -140,6 +140,11 @@
         font-size: 14px;
     }
     
+    /* Projects */
+    #projects .tools-used ul li p {
+        font-size: 14px;
+    }
+    
     /* Copyrights */
     #footer-copyrights-p {
         text-align: center;
