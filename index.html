@@ -27,20 +27,20 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap/bootstrap.css">
-    
+
     <!-- Font Awesome CSS -->
     <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
 
     <!-- Animate CSS -->
     <link rel="stylesheet" href="css/animate/animate.css">
-    
+
     <!-- Owl Carousel + Theme CSS -->
     <link rel="stylesheet" href="css/owl-carousel/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl-carousel/owl.theme.default.min.css">
-    
+
     <!-- Magnific Popup CSS -->
     <link rel="stylesheet" href="css/magnific-popup/magnific-popup.css">
-    
+
     <!-- Twenty Twenty CSS -->
     <link rel="stylesheet" href="css/twenty-twenty/twentytwenty-no-compass.css">
 
@@ -51,7 +51,12 @@
 </head>
 
 <body data-spy="scroll" data-target=".navbar-fixed-top" data-offset="65">
-    
+
+    <div id="overlay">
+        <div id="progstat"></div>
+        <div id="progress"></div>
+    </div>
+
     <!-- Header -->
     <header>
         <nav class="navbar navbar-fixed-top">
@@ -142,7 +147,7 @@
 
                                     <a class="btn btn-lg btn-general btn-green smooth-scroll" href="#projects" role="button" title="View Projects">My Projects</a>
                                 </div>
-                                
+
                             </div>
                         </div>
                     </div>
@@ -150,10 +155,10 @@
             </div>
         </div>
     </section>
-    
+
     <!-- School Career -->
     <section id="school-career">
-        
+
         <div class="content-box">
             <div class="content-title wow animated fadeInDown" data-wow-duration="1s" data-wow-delay=".5s">
                 <h3>School Career & Internships</h3>
@@ -162,56 +167,68 @@
         </div>
 
         <div id="school-career-cover" class="bg-parallax">
-                <div class="container">
-                    <div class="row wow animated bounceInDown" data-wow-duration="1s" data-wow-delay=".5s">
-                        <div class="col-md-12">
-                            <div id="schools" class="text-center owl-carousel owl-theme">
+            <div class="container">
+                <div class="row wow animated bounceInDown" data-wow-duration="1s" data-wow-delay=".5s">
+                    <div class="col-md-12">
+                        <div id="schools" class="text-center owl-carousel owl-theme">
 
-                                <div class="school">
-                                    <img src="img/logo-schools/iut-belfort-montbeliard.jpg" class="img-responsive img-circle" alt="IUT de Belfort-Montbéliard">
-                                    <blockquote class="text-center">
-                                        <p class="text-center">Received a University Degree in Computer Science, Institut universitaire de Belfort-Montbéliard, Belfort, (2012-2015).<br>Selected for practical computer science training, including courses for economic sciences and law.</p>
-                                    </blockquote>
-                                </div>
-                                
-                                <div class="school">
-                                    <img src="img/logo-schools/internship-c2ai.jpg" class="img-responsive img-circle" alt="Internship C2AI">
-                                    <blockquote class="text-center">
-                                        <p class="text-center">DEVELOPER OF A WEBSITE, internship in C2AI, Burnhaupt-le-bas (2014-15). Named as directly responsible for the development, status reports and maintenance of the new website.</p>
-                                            <ul>
-                                                <li><p>Developed a database for managing all the available products.</p></li>
-                                                <li><p>Implemented a breadcrumb to facilitate the navigation on the website. The aim was to access every pages of the website without using the previous button.</p></li>
-                                                <li><p>Created a website which can be displayed on every web browsers and platforms like phones, tablets and computers.</p></li>
-                                            </ul>
-                                    </blockquote>
-                                </div>
-
-                                <div class="school">
-                                    <img src="img/logo-schools/miage-mulhouse.jpg" class="img-responsive img-circle" alt="Formation MIAGE à l'université de Haute-Alsace">
-                                    <blockquote class="text-center">
-                                        <p class="text-center">Received a Bachelor’s Degree in Computer Science applied to Business Management, Université de Haute-Alsace, Campus Illberg, Mulhouse, (2016).<br><br>Will receive a Master’s Degree in Computer Science applied to Business Management, Université de Haute-Alsace, Campus Illberg, Mulhouse, summer 2018.<br><br>Selected for its dual expertise, including courses for economic sciences and computer operations in different domains like software programming, android applications and web development.</p>
-                                    </blockquote>
-                                </div>
-                                
-                                <div class="school">
-                                    <img src="img/logo-schools/internship-uha.jpg" class="img-responsive img-circle" alt="Internship UHA">
-                                    <blockquote class="text-center">
-                                        <p class="text-center">DEVELOPER OF WEB AND MOBILE APPLICATION, internship in Université de Haute-Alsace, Campus Illberg, Mulhouse (2016). Made numerous important contributions for a project which is used today, named “Rallye Miage Mulhouse”.</p>
-                                            <ul>
-                                                <li><p>Updated an existing android application into one which sets to supervisor’s orders.</p></li>
-                                                <li><p>Implemented a new secure way to receive and transfer data to a server.</p></li>
-                                                <li><p>Developed a version of the application where there is no need to have an internet connection using JSON and XML files technology.</p></li>
-                                            </ul>
-                                    </blockquote>
-                                </div>
-
+                            <div class="school">
+                                <img src="img/logo-schools/iut-belfort-montbeliard.jpg" class="img-responsive img-circle" alt="IUT de Belfort-Montbéliard">
+                                <blockquote class="text-center">
+                                    <p class="text-center">Received a University Degree in Computer Science, Institut universitaire de Belfort-Montbéliard, Belfort, (2012-2015).<br>Selected for practical computer science training, including courses for economic sciences and law.</p>
+                                </blockquote>
                             </div>
+
+                            <div class="school">
+                                <img src="img/logo-schools/internship-c2ai.jpg" class="img-responsive img-circle" alt="Internship C2AI">
+                                <blockquote class="text-center">
+                                    <p class="text-center">DEVELOPER OF A WEBSITE, internship in C2AI, Burnhaupt-le-bas (2014-15). Named as directly responsible for the development, status reports and maintenance of the new website.</p>
+                                    <ul>
+                                        <li>
+                                            <p>Developed a database for managing all the available products.</p>
+                                        </li>
+                                        <li>
+                                            <p>Implemented a breadcrumb to facilitate the navigation on the website. The aim was to access every pages of the website without using the previous button.</p>
+                                        </li>
+                                        <li>
+                                            <p>Created a website which can be displayed on every web browsers and platforms like phones, tablets and computers.</p>
+                                        </li>
+                                    </ul>
+                                </blockquote>
+                            </div>
+
+                            <div class="school">
+                                <img src="img/logo-schools/miage-mulhouse.jpg" class="img-responsive img-circle" alt="Formation MIAGE à l'université de Haute-Alsace">
+                                <blockquote class="text-center">
+                                    <p class="text-center">Received a Bachelor’s Degree in Computer Science applied to Business Management, Université de Haute-Alsace, Campus Illberg, Mulhouse, (2016).<br><br>Will receive a Master’s Degree in Computer Science applied to Business Management, Université de Haute-Alsace, Campus Illberg, Mulhouse, summer 2018.<br><br>Selected for its dual expertise, including courses for economic sciences and computer operations in different domains like software programming, android applications and web development.</p>
+                                </blockquote>
+                            </div>
+
+                            <div class="school">
+                                <img src="img/logo-schools/internship-uha.jpg" class="img-responsive img-circle" alt="Internship UHA">
+                                <blockquote class="text-center">
+                                    <p class="text-center">DEVELOPER OF WEB AND MOBILE APPLICATION, internship in Université de Haute-Alsace, Campus Illberg, Mulhouse (2016). Made numerous important contributions for a project which is used today, named “Rallye Miage Mulhouse”.</p>
+                                    <ul>
+                                        <li>
+                                            <p>Updated an existing android application into one which sets to supervisor’s orders.</p>
+                                        </li>
+                                        <li>
+                                            <p>Implemented a new secure way to receive and transfer data to a server.</p>
+                                        </li>
+                                        <li>
+                                            <p>Developed a version of the application where there is no need to have an internet connection using JSON and XML files technology.</p>
+                                        </li>
+                                    </ul>
+                                </blockquote>
+                            </div>
+
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
     </section>
-    
+
     <!-- Skills -->
     <section id="skills">
         <div class="content-box">
@@ -290,7 +307,7 @@
 
         </div>
     </section>
-    
+
     <!-- Projects -->
     <section id="projects">
 
@@ -300,7 +317,7 @@
                 <div class="content-title-underline"></div>
             </div>
         </div>
-        
+
         <div class="container">
             <div class="row wow animated bounceInLeft" data-wow-duration="1s" data-wow-delay=".5s">
                 <div class="col-md-12">
@@ -346,7 +363,7 @@
                     </div>
                     <div class="underline-project"></div>
                 </div>
-                
+
                 <div class="col-md-12">
                     <div class="project-name">
                         <a class="btn btn-lg btn-general btn-green" href="/enigma/index.html" role="button" title="View Projects">Project 2 : Enigma</a>
@@ -375,7 +392,7 @@
                     </div>
                     <div class="underline-project"></div>
                 </div>
-                
+
             </div>
         </div>
     </section>
@@ -417,20 +434,20 @@
 
     <!-- Bootstrap JS -->
     <script src="js/bootstrap/bootstrap.js"></script>
-    
+
     <!-- Wow JS-->
     <script src="js/wow/wow.min.js"></script>
-    
+
     <!-- Owl Carousel JS -->
     <script src="js/owl-carousel/owl.carousel.min.js"></script>
-    
+
     <!-- Magnific Popup JS -->
     <script src="js/magnific-popup/jquery.magnific-popup.min.js"></script>
-    
+
     <!-- Twenty Twenty JS -->
     <script src="js/twenty-twenty/jquery.event.move.js"></script>
     <script src="js/twenty-twenty/jquery.twentytwenty.js"></script>
-    
+
     <!-- JQuery Easing -->
     <script src="js/jquery-easing/jquery.easing.1.3.js"></script>
 
