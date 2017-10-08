@@ -649,3 +649,12 @@ form .form-control {
     margin: 0 0 0 0;
     border: 0px;
 }
+
+#redirect-portfolio {
+    text-decoration: none;
+    color: #70B45A;
+}
+
+#redirect-portfolio:hover {
+    color: #A1D890;
+}
