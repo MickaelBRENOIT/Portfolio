@@ -27,6 +27,21 @@ $(function () {
 
 var rotor_start = [];
 
+// The first eight strings represent the rotor substitutions I through VIII. The second 8 are the 
+//  inverse transformations
+var key = ["EKMFLGDQVZNTOWYHXUSPAIBRCJ", "AJDKSIRUXBLHWTMCQGZNPYFVOE", "BDFHJLCPRTXVZNYEIWGAKMUSQO",
+               "ESOVPZJAYQUIRHXLNFTGKDCMWB", "VZBRGITYUPSDNHLXAWMJQOFECK", "JPGVOUMFYQBENHZRDKASXLICTW",
+               "NZJHGRCXMYSWBOUFAIVLPEKQDT", "FKQHTLXOCBJSPDZRAMEWNIUYGV",
+               // inverses
+               "UWYGADFPVZBECKMTHXSLRINQOJ", "AJPCZWRLFBDKOTYUQGENHXMIVS", "TAGBPCSDQEUFVNZHYIXJWLRKOM",
+               "HZWVARTNLGUPXQCEJMBSKDYOIF", "QCYLXWENFTZOSMVJUDKGIARPHB", "SKXQLHCNWARVGMEBJPTYFDZUIO",
+               "QMGYVPEDRCWTIANUXFKZOSLHJB", "QJINSAYDVKBFRUHMCPLEWZTGXO"];
+
+//notch = [['Q','Q'],['E','E'],['V','V'],['J','J'],['Z','Z'],['Z','M'],['Z','M'],['Z','M']];
+// The notch array stores the positions at which each rotor kicks over the rotor to its left
+var notch = [[16, 16], [4, 4], [21, 21], [9, 9], [25, 25], [25, 12], [25, 12], [25, 12]];
+
+
 $(function () {
     $(".btn-circle-enigma").click(function (event) {
         // get Text Button (title)
@@ -90,31 +105,19 @@ function code(ch) {
     return ch.toUpperCase().charCodeAt(0) - 65;
 }
 
-function increment_settings(key, r) {
-    //notch = [['Q','Q'],['E','E'],['V','V'],['J','J'],['Z','Z'],['Z','M'],['Z','M'],['Z','M']];
-    // The notch array stores the positions at which each rotor kicks over the rotor to its left
-    var notch = [[16, 16], [4, 4], [21, 21], [9, 9], [25, 25], [25, 12], [25, 12], [25, 12]];
-    if (key[1] == notch[r[1]][0] || key[1] == notch[r[1]][1]) {
-        key[0] = (key[0] + 1) % 26;
-        key[1] = (key[1] + 1) % 26;
+function increment_settings(rotor_key, r) {
+    if (rotor_key[1] == notch[r[1]][0] || rotor_key[1] == notch[r[1]][1]) {
+        rotor_key[0] = (rotor_key[0] + 1) % 26;
+        rotor_key[1] = (rotor_key[1] + 1) % 26;
     }
-    if (key[2] == notch[r[2]][0] || key[2] == notch[r[2]][1]) {
-        key[1] = (key[1] + 1) % 26;
+    if (rotor_key[2] == notch[r[2]][0] || rotor_key[2] == notch[r[2]][1]) {
+        rotor_key[1] = (rotor_key[1] + 1) % 26;
     }
-    key[2] = (key[2] + 1) % 26;
-    return key;
+    rotor_key[2] = (rotor_key[2] + 1) % 26;
+    return rotor_key;
 }
 
 function rotor(ch, r, offset) {
-    // The first eight strings represent the rotor substitutions I through VIII. The second 8 are the 
-    //  inverse transformations
-    var key = ["EKMFLGDQVZNTOWYHXUSPAIBRCJ", "AJDKSIRUXBLHWTMCQGZNPYFVOE", "BDFHJLCPRTXVZNYEIWGAKMUSQO",
-               "ESOVPZJAYQUIRHXLNFTGKDCMWB", "VZBRGITYUPSDNHLXAWMJQOFECK", "JPGVOUMFYQBENHZRDKASXLICTW",
-               "NZJHGRCXMYSWBOUFAIVLPEKQDT", "FKQHTLXOCBJSPDZRAMEWNIUYGV",
-               // inverses
-               "UWYGADFPVZBECKMTHXSLRINQOJ", "AJPCZWRLFBDKOTYUQGENHXMIVS", "TAGBPCSDQEUFVNZHYIXJWLRKOM",
-               "HZWVARTNLGUPXQCEJMBSKDYOIF", "QCYLXWENFTZOSMVJUDKGIARPHB", "SKXQLHCNWARVGMEBJPTYFDZUIO",
-               "QMGYVPEDRCWTIANUXFKZOSLHJB", "QJINSAYDVKBFRUHMCPLEWZTGXO"];
     // the following code looks a bit horrible, but it is essentially just doing a simple substitution
     //  taking into account 16 possible keys (8 rotors and their inverses) and the offset (which is calculated
     //  from the indicator and ring settings). The offset essentially shifts the rotor key to the left or right
@@ -124,23 +127,23 @@ function rotor(ch, r, offset) {
 }
 
 // perform a simple substitution cipher
-function simplesub(ch, key) {
-    return key.charAt(code(ch));
+function simplesub(ch, rotor_key) {
+    return rotor_key.charAt(code(ch));
 }
 
-function enigma(ch, key, rotors, ring, plugboard) {
+function enigma(ch, rotor_key, rotors, ring, plugboard) {
     // apply plugboard transformation
     ch = simplesub(ch, plugboard);
     // apply rotor transformations from right to left
-    ch = rotor(ch, rotors[2], key[2] - ring[2]);
-    ch = rotor(ch, rotors[1], key[1] - ring[1]);
-    ch = rotor(ch, rotors[0], key[0] - ring[0]);
+    ch = rotor(ch, rotors[2], rotor_key[2] - ring[2]);
+    ch = rotor(ch, rotors[1], rotor_key[1] - ring[1]);
+    ch = rotor(ch, rotors[0], rotor_key[0] - ring[0]);
     // use reflector B
     ch = simplesub(ch, "YRUHQSLDPXNGOKMIEBFZCWVJAT");
     // apply inverse rotor transformations from left to right
-    ch = rotor(ch, rotors[0] + 8, key[0] - ring[0]);
-    ch = rotor(ch, rotors[1] + 8, key[1] - ring[1]);
-    ch = rotor(ch, rotors[2] + 8, key[2] - ring[2]);
+    ch = rotor(ch, rotors[0] + 8, rotor_key[0] - ring[0]);
+    ch = rotor(ch, rotors[1] + 8, rotor_key[1] - ring[1]);
+    ch = rotor(ch, rotors[2] + 8, rotor_key[2] - ring[2]);
     // apply plugboard transformation again
     ch = simplesub(ch, plugboard);
     return ch;
