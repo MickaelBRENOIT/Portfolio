@@ -639,3 +639,13 @@ form .form-control {
 .textarea-result {
     resize: vertical;
 }
+
+/*=================================================================
+                        ENIGMA footer
+==================================================================*/
+
+#footer-enigma {
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+    border: 0px;
+}

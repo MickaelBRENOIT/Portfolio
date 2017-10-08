@@ -27,12 +27,46 @@
 
     <!-- CSS Files -->
     <link rel="stylesheet" href="../css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="../css/animate/animate.css">
     <link rel="stylesheet" href="../css/style.css">
 
 
 </head>
 
-<body id="enigma-body">
+<body id="enigma-body" data-spy="scroll" data-target=".navbar-fixed-top" data-offset="65">
+
+    <!-- Header -->
+    <header>
+        <nav class="navbar navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="portfolio-nav-wrapper">
+                    <div class="navbar-header">
+
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#portfolio-menu">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+
+                        <a class="navbar-brand smooth-scroll" href="#home">
+                            <img src="../img/logo.png" alt="logo">
+                        </a>
+                    </div>
+
+                    <div class="collapse navbar-collapse" id="portfolio-menu">
+                        <ul class="nav navbar-nav">
+                            <li><a class="smooth-scroll" href="#enigma-intro-section">Intro</a></li>
+                            <li><a class="smooth-scroll" href="#enigma-plugboard-section">Plugboard</a></li>
+                            <li><a class="smooth-scroll" href="#enigma-rotors-section">Rotors</a></li>
+                            <li><a class="smooth-scroll" href="#enigma-rings-section">Rings</a></li>
+                            <li><a class="smooth-scroll" href="#enigma-keyboard-section">Keyboard Inputs & Result</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
 
     <section id="enigma-intro-section">
 
@@ -52,7 +86,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="enigma-description">
+                    <div class="enigma-description wow animated bounceInLeft" data-wow-duration="1s" data-wow-delay=".5s">
                         <pre class="pre-enigma">"The Enigma machines were a series of electro-mechanical rotor cipher machines developed and used in the early- to mid-20th century to protect commercial, diplomatic and military communication. Enigma was invented by the German engineer Arthur Scherbius at the end of World War I. Early models were used commercially from the early 1920s, and adopted by military and government services of several countries, most notably Nazi Germany before and during World War II. Several different Enigma models were produced, but the German military models, having a plugboard, were the most complex. Japanese and Italian models were also in use." - Wikipedia<br/><br/>This page will show you a fully working example how Enigma works.<br/>Implementation available on : <a href="http://practicalcryptography.com/ciphers/enigma-cipher/#javascript-example">http://practicalcryptography.com/ciphers/enigma-cipher/#javascript-example</a></pre>
                     </div>
                 </div>
@@ -73,7 +107,7 @@
 
         <!-- Plugboard description -->
         <div class="container-fluid">
-            <div class="row">
+            <div class="row wow animated bounceInRight" data-wow-duration="1s" data-wow-delay=".5s">
                 <div class="col-md-4">
                     <div class="enigma-plugboard-text">
                         <p class="enigma-text">In 1930, the plugboard or Steckerbrett was introduced on the first Wehrmacht Enigma version. The plugboard is situated on the front of the machine. Without an inserted plug, the current flows from the switches, controlled by the keyboard, directly to the entry rotor. Inserting a cable results in swapping the two involved letters before proceeding to the entry rotor. Each machine was by default equipped with a set of 10 cables. The plugbord was an important improvement of the machines encryption strength.
@@ -115,7 +149,7 @@
 
         <!-- Rotors description -->
         <div class="container-fluid">
-            <div class="row">
+            <div class="row wow animated bounceInLeft" data-wow-duration="1s" data-wow-delay=".5s">
                 <div class="col-md-8">
                     <div id="enigma-rotors-img" class="bg-parallax">
                     </div>
@@ -230,7 +264,7 @@
 
         <!-- Rings description -->
         <div class="container-fluid">
-            <div class="row">
+            <div class="row wow animated bounceInRight" data-wow-duration="1s" data-wow-delay=".5s">
                 <div class="col-md-4">
                     <div class="enigma-rings-text">
                         <p class="enigma-text">The ring settings, or Ringstellung, are used to change the position of the internal wiring relative to the rotor. They do not change the notch or the alphabet ring on the exterior. Those are fixed to the rotor. Changing the ring setting will therefore change the positions of the wiring, relative to the turnover-point and start position.<br/>The ring setting will rotate the wiring. Where rotor I in the A-position normally encodes an A into an E, with a ring setting offset B-02 it will be encoded into K.<br/>As mentioned before these encodings only happen after the key is pressed and the rotor has turned. Tracing the signal on the rotors AAA is therefore only possible if a key is pressed while the rotors were in the position AAZ.<br/>With the rotors I, II, III (from left to right), wide B-reflector, all ring settings in B-position, and start position AAA, typing AAAAA will produce the encoded sequence EWTYX.<br/><br/>Source : <a href="https://en.wikipedia.org/wiki/Enigma_rotor_details">https://en.wikipedia.org/wiki/Enigma_rotor_details</a></p>
@@ -294,7 +328,7 @@
 
         <!-- Keyboard input description -->
         <div class="container">
-            <div class="row space-rows-input">
+            <div class="row space-rows-input wow animated bounceInLeft" data-wow-duration="1s" data-wow-delay=".5s">
                 <!-- ABCDEF : first row -->
                 <div class="col-md-1 col-md-offset-1">
                     <button type="button" id="A" class="btn btn-default btn-circle-enigma btn-lg">A</button>
@@ -316,7 +350,7 @@
                 </div>
             </div>
 
-            <div class="row space-rows-input">
+            <div class="row space-rows-input wow animated bounceInRight" data-wow-duration="1s" data-wow-delay=".5s">
                 <!-- GHIJKL : second row -->
                 <div class="col-md-1">
                     <button type="button" id="G" class="btn btn-default btn-circle-enigma btn-lg">G</button>
@@ -340,7 +374,7 @@
                 </div>
             </div>
 
-            <div class="row space-rows-input">
+            <div class="row space-rows-input wow animated bounceInLeft" data-wow-duration="1s" data-wow-delay=".5s">
                 <!-- MNOPQR : third row -->
                 <div class="col-md-1 col-md-offset-1">
                     <button type="button" id="M" class="btn btn-default btn-circle-enigma btn-lg">M</button>
@@ -362,7 +396,7 @@
                 </div>
             </div>
 
-            <div class="row space-rows-input">
+            <div class="row space-rows-input wow animated bounceInRight" data-wow-duration="1s" data-wow-delay=".5s">
                 <!-- STUVWX : fourth row -->
                 <div class="col-md-1">
                     <button type="button" id="S" class="btn btn-default btn-circle-enigma btn-lg">S</button>
@@ -386,7 +420,7 @@
                 </div>
             </div>
 
-            <div class="row space-rows-input">
+            <div class="row space-rows-input wow animated bounceInLeft" data-wow-duration="1s" data-wow-delay=".5s">
                 <!-- YZ : fifth row -->
                 <div class="col-md-1 col-md-offset-3">
                     <button type="button" id="Y" class="btn btn-default btn-circle-enigma btn-lg">Y</button>
@@ -413,8 +447,37 @@
 
     </section>
 
+    <a href="#enigma-intro-section" id="back-to-top" class="btn btn-sm btn-green btn-back-to-top smooth-scroll hidden-sm hidden-xs" title="home" role="button">
+    Top
+    </a>
+
     <!-- Temporary spaces -->
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br>
+
+    <footer id="footer-enigma">
+        <div id="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div id="footer-copyrights">
+                            <p id="footer-copyrights-p">Copyrights &copy; 2017 All Rights Reserved by Mickaël BRENOIT</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 hidden-sm hidden-xs links">
+                        <div id="footer-menu">
+                            <ul>
+                                <li><a class="smooth-scroll" href="#enigma-intro-section">Intro</a>/</li>
+                                <li><a class="smooth-scroll" href="#enigma-plugboard-section">Plugboard</a>/</li>
+                                <li><a class="smooth-scroll" href="#enigma-rotors-section">Rotors</a>/</li>
+                                <li><a class="smooth-scroll" href="#enigma-rings-section">Rings</a>/</li>
+                                <li><a class="smooth-scroll" href="#enigma-keyboard-section">Keyboard Inputs & Result</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <!-- Section where all JS files will be called -->
 
@@ -423,6 +486,12 @@
 
     <!-- Bootstrap JS -->
     <script src="../js/bootstrap/bootstrap.js"></script>
+
+    <!-- Wow JS-->
+    <script src="../js/wow/wow.min.js"></script>
+
+    <!-- JQuery Easing -->
+    <script src="../js/jquery-easing/jquery.easing.1.3.js"></script>
 
     <!-- Custom File JS -->
     <script src="../js/customEnigma.js"></script>
